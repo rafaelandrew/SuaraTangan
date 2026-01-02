@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/bg_splash_gradient">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white"
+        android:elevation="4dp">
+
+        <ImageView
+            android:id="@+id/iv_back_bantuan"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:padding="12dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:tint="@android:color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Bantuan"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_lapor_masalah"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_white_rounded"
+            android:drawableStart="@drawable/ic_new_feature"
+            android:drawableEnd="@drawable/ic_arrow_right"
+            android:drawableTint="@android:color/black"
+            android:text="Laporkan Masalah"
+            android:gravity="center_vertical|start"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:drawablePadding="16dp"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_pusat_bantuan"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_white_rounded"
+            android:drawableStart="@drawable/ic_notif"
+            android:drawableEnd="@drawable/ic_arrow_right"
+            android:drawableTint="@android:color/black"
+            android:text="Pusat Bantuan"
+            android:gravity="center_vertical|start"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:drawablePadding="16dp"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_privasi"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_white_rounded"
+            android:drawableStart="@drawable/ic_system_update"
+            android:drawableEnd="@drawable/ic_arrow_right"
+            android:drawableTint="@android:color/black"
+            android:text="Bantuan Privasi dan Keamanan"
+            android:gravity="center_vertical|start"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:drawablePadding="16dp"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_panduan"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/bg_white_rounded"
+            android:drawableStart="@drawable/ic_profile"
+            android:drawableEnd="@drawable/ic_arrow_right"
+            android:drawableTint="@android:color/black"
+            android:text="Buku Panduan"
+            android:gravity="center_vertical|start"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:drawablePadding="16dp"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</LinearLayout>

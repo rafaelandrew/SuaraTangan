@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_splash_gradient"
+    android:fitsSystemWindows="true"
+    tools:context=".UpdateDetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/header_update"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+
+        <ImageView
+            android:id="@+id/iv_update_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:padding="12dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:tint="@android:color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Detail Update"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_white_rounded"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    android:lineSpacingMultiplier="1.3"
+                    android:text="Pembaharuan aplikasi Suara Tangan mengadopsi teknologi AI untuk menambah pengalaman pengguna saat menggunakan aplikasi Suara Tangan. Detail pembaharuan aplikasi sebagai berikut:\n\n1. Inti Pembaruan: Mode Penerjemah Suara (Voice Interpreter Mode)\nPembaruan utama akan berupa penambahan mode baru yang didedikasikan untuk terjemahan percakapan real-time:\n- Implementasi STT &amp; TTS: Aplikasi akan mengintegrasikan Speech-to-Text (mengubah suara menjadi teks) dan Text-to-Speech (mengubah teks terjemahan menjadi suara yang diucapkan) untuk menciptakan terjemahan percakapan dua arah secara langsung.\n- Pengenalan NMT: Aplikasi akan beralih menggunakan Neural Machine Translation (NMT) sebagai model terjemahan intinya. NMT akan memastikan terjemahan yang dihasilkan lebih akurat dan kontekstual karena menerjemahkan seluruh frasa, bukan kata demi kata.\n\n2. Peningkatan Pengalaman Pengguna (UX)\nUntuk membuat terjemahan terasa real-time, update ini akan fokus pada optimasi interaksi:\n- Penerjemahan Instan: Jeda (latency) antara ucapan Pengguna A dan output suara terjemahan untuk Pengguna B diperpendek hingga nyaris nol.\n- Mode &quot;Listen&quot; Otomatis: Aplikasi dapat secara otomatis mendeteksi ketika salah satu pengguna selesai berbicara dan langsung beralih ke bahasa lawan bicara tanpa perlu menekan tombol berulang kali.\n- Tampilan Teks Terjemahan: Saat percakapan berlangsung, teks asli dan teks terjemahan ditampilkan secara simultan di layar.\n\n3. Fitur Tambahan Terkait Translate\n- Terjemahan Teks Kamera (AR Translation): Pengguna dapat mengarahkan kamera mereka ke teks asing dan aplikasi akan menggunakan Optical Character Recognition (OCR) untuk mengekstrak teks, menerjemahkannya, dan menampilkannya di atas objek secara real-time (Augmented Reality)." />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".FragmentProfile">
+
+    <View
+        android:id="@+id/header_bg"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@drawable/bg_splash_gradient" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AKUN"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="140dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_profile_pic"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_profile_placeholder"
+            android:padding="2dp"
+            android:background="@android:color/white"
+            android:layout_gravity="center"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.MediumComponent" />
+
+        <TextView
+            android:id="@+id/tv_username_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yohana Lydia"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_info_akun"
+                style="@style/MenuButtonStyle"
+                android:text="Informasi Akun"
+                android:drawableStart="@drawable/ic_profile" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_ubah_sandi"
+                style="@style/MenuButtonStyle"
+                android:text="Ubah Kata Sandi"
+                android:drawableStart="@drawable/ic_notif" /> <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_bantuan"
+            style="@style/MenuButtonStyle"
+            android:text="Bantuan"
+            android:drawableStart="@drawable/ic_new_feature" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_kotak_saran"
+                style="@style/MenuButtonStyle"
+                android:text="Kotak Saran"
+                android:drawableStart="@drawable/ic_notifications" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_keluar"
+                style="@style/MenuButtonStyle"
+                android:text="Keluar"
+                android:drawableStart="@drawable/ic_baseline_arrow_back_24" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

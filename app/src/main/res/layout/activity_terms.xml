@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_splash_gradient"
+    android:fitsSystemWindows="true"
+    tools:context=".TermsActivity">
+
+    <RelativeLayout
+        android:id="@+id/header_terms"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+
+        <ImageView
+            android:id="@+id/iv_terms_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:padding="12dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:tint="@android:color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Syarat &amp; Ketentuan"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_white_rounded"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1. Pendahuluan"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Selamat datang di Suara Tangan. Aplikasi ini bertujuan menjembatani komunikasi antara Teman Tuli dan Teman Dengar menggunakan teknologi penerjemah. Dengan menggunakan layanan ini, Anda menyetujui seluruh ketentuan yang berlaku."
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    android:lineSpacingMultiplier="1.3"
+                    android:layout_marginBottom="24dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2. Akses Kamera &amp; Mikrofon"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Layanan utama kami memerlukan akses ke Kamera (untuk menerjemahkan gerakan tangan/BISINDO) dan Mikrofon (untuk fitur Speech-to-Text). Kami menjamin bahwa data visual dan audio yang diproses secara real-time tidak disimpan secara permanen di server kami demi menjaga privasi Anda."
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    android:lineSpacingMultiplier="1.3"
+                    android:layout_marginBottom="24dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3. Akurasi Terjemahan"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Aplikasi ini menggunakan teknologi Machine Learning yang terus berkembang. Terjemahan yang dihasilkan mungkin tidak 100% akurat setiap saat. Aplikasi ini berfungsi sebagai alat bantu komunikasi sehari-hari dan tidak disarankan untuk digunakan sebagai satu-satunya alat penerjemah dalam situasi kritis (medis, hukum, atau darurat)."
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    android:lineSpacingMultiplier="1.3"
+                    android:layout_marginBottom="24dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4. Akun Pengguna"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Saat mendaftar, Anda wajib memilih peran yang sesuai (Teman Tuli atau Teman Dengar) untuk optimalisasi pengalaman pengguna. Anda bertanggung jawab penuh atas keamanan kata sandi dan aktivitas yang terjadi pada akun Anda."
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    android:lineSpacingMultiplier="1.3"
+                    android:layout_marginBottom="24dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5. Perilaku Pengguna"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Anda dilarang keras menggunakan fitur video atau teks untuk menyebarkan konten yang mengandung unsur SARA, pornografi, atau ujaran kebencian. Pelanggaran terhadap ketentuan ini dapat mengakibatkan penonaktifan akun secara permanen."
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    android:lineSpacingMultiplier="1.3"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

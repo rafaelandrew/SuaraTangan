@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/bg_splash_gradient">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white"
+        android:elevation="4dp">
+
+        <ImageView
+            android:id="@+id/iv_back_info"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:padding="12dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:tint="@android:color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Informasi Akun"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_white_rounded"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- Display Mode Views (v1 style) -->
+                <LinearLayout
+                    android:id="@+id/layout_display_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <!-- Email First -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="8dp"/>
+                    <TextView
+                        android:id="@+id/tv_info_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_rounded_gray"
+                        android:padding="12dp"
+                        android:text="-"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <!-- Nama Pengguna Second -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nama Pengguna"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp"/>
+                    <TextView
+                        android:id="@+id/tv_info_nama"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_rounded_gray"
+                        android:padding="12dp"
+                        android:text="-"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <!-- Nomor Telepon Third -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nomor Telepon"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp"/>
+                    <TextView
+                        android:id="@+id/tv_info_telepon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_rounded_gray"
+                        android:padding="12dp"
+                        android:text="-"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <!-- Peran Fourth -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="Peran"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:id="@+id/tv_info_peran"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_rounded_gray"
+                        android:padding="12dp"
+                        android:text="-"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <!-- Edit Mode Views (v2 style) -->
+                <LinearLayout
+                    android:id="@+id/layout_edit_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <!-- Email First (Read-only in edit mode) -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="8dp"/>
+                    <TextView
+                        android:id="@+id/tv_info_email_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_rounded_gray"
+                        android:padding="12dp"
+                        android:text="-"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <!-- Nama Pengguna Second -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_info_nama"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="8dp"
+                        android:hint="Nama Pengguna"
+                        app:boxBackgroundColor="#E0E0E0"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:boxCornerRadiusTopStart="24dp"
+                        app:boxCornerRadiusTopEnd="24dp"
+                        app:boxCornerRadiusBottomStart="24dp"
+                        app:boxCornerRadiusBottomEnd="24dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_info_nama"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Nomor Telepon Third -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_info_telepon"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="8dp"
+                        android:hint="Nomor Telepon"
+                        app:boxBackgroundColor="#E0E0E0"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:boxCornerRadiusTopStart="24dp"
+                        app:boxCornerRadiusTopEnd="24dp"
+                        app:boxCornerRadiusBottomStart="24dp"
+                        app:boxCornerRadiusBottomEnd="24dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_info_telepon"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:inputType="phone" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Peran Fourth -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Peran"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp"/>
+
+                    <RadioGroup
+                        android:id="@+id/rg_info_peran"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/rb_teman_dengar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Teman Dengar" />
+
+                        <RadioButton
+                            android:id="@+id/rb_teman_tuli"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Teman Tuli" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <!-- Edit/Save Button (styled like ubah_sandi button) -->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_edit_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/button_gradient_rounded"
+                    android:text="Edit"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
