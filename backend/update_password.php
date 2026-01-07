@@ -21,7 +21,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $new_password = $_POST['new_password'] ?? '';
     $confirm_password = $_POST['confirm_password'] ?? '';
 
-    // VALIDATION
     $errors = [];
 
     if (empty($user_id)) {
@@ -44,7 +43,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errors[] = "New passwords do not match";
     }
 
-    // Password validation: min 6 chars, 1 capital, 1 symbol
     if (!empty($new_password)) {
         if (strlen($new_password) < 6 ||
             !preg_match('/[A-Z]/', $new_password) ||
@@ -61,7 +59,6 @@ $errors)]);
     }
 
     try {
-        // Verify current password
         $stmt = $pdo->prepare("SELECT password FROM users WHERE id = 
 :id");
         $stmt->execute([':id' => $user_id]);
@@ -79,7 +76,6 @@ password is incorrect"]);
             exit;
         }
 
-        // Update password
         $hashed_pass = password_hash($new_password, PASSWORD_BCRYPT);
         $stmt = $pdo->prepare("UPDATE users SET password = :pass WHERE id 
 = :id");
