@@ -32,7 +32,6 @@ required to delete account"]);
     }
 
     try {
-        // Verify password before deleting
         $stmt = $pdo->prepare("SELECT password FROM users WHERE id = 
 :id");
         $stmt->execute([':id' => $user_id]);
@@ -50,7 +49,6 @@ password"]);
             exit;
         }
 
-        // Delete user
         $stmt = $pdo->prepare("DELETE FROM users WHERE id = :id");
         $stmt->execute([':id' => $user_id]);
 
