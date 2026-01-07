@@ -21,24 +21,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $telp = trim($_POST['telepon'] ?? '');
     $peran = $_POST['peran'] ?? '';
 
-    // VALIDATION
     $errors = [];
 
     if (empty($user_id)) {
         $errors[] = "User ID is required";
     }
 
-    // 1. Nama must start with capital letter
     if (!empty($nama) && !preg_match('/^[A-Z]/', $nama)) {
         $errors[] = "Nama must start with a capital letter";
     }
 
-    // 2. Telepon must be exactly 12 digits if provided
     if (!empty($telp) && !preg_match('/^\d{12}$/', $telp)) {
         $errors[] = "Telepon must be exactly 12 digits";
     }
 
-    // 3. Peran must be one of the two options if provided
     if (!empty($peran)) {
     error_log("Received peran: [" . $peran . "] length: " . strlen($peran) 
 . " hex: " . bin2hex($peran));
@@ -59,7 +55,6 @@ $errors)]);
     }
 
     try {
-        // Build dynamic SQL based on what fields are provided
         $updates = [];
         $params = [':id' => $user_id];
 
@@ -88,7 +83,6 @@ to update"]);
         $stmt->execute($params);
 
         if ($stmt->rowCount() > 0) {
-            // Fetch updated user data
             $stmt = $pdo->prepare("SELECT id, nama_lengkap, username, 
 email, telepon, peran FROM users WHERE id = :id");
             $stmt->execute([':id' => $user_id]);
