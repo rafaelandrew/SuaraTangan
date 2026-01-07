@@ -11,31 +11,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $pass = $_POST['password'] ?? '';
     $peran = $_POST['peran'] ?? '';
 
-    // VALIDATION
     $errors = [];
 
-    // 1. Nama must start with capital letter
     if (!preg_match('/^[A-Z]/', $nama)) {
         $errors[] = "Nama must start with a capital letter";
     }
 
-    // 2. Username must be 4-16 characters
     if (strlen($user) < 4 || strlen($user) > 16) {
         $errors[] = "Username must be 4-16 characters";
     }
 
-    // 3. Email must contain @.com
     if (!filter_var($email, FILTER_VALIDATE_EMAIL) || 
 !str_contains($email, '.com')) {
         $errors[] = "Email must be valid and contain .com";
     }
 
-    // 4. Telepon must be exactly 12 digits
     if (!preg_match('/^\d{12}$/', $telp)) {
         $errors[] = "Telepon must be exactly 12 digits";
     }
 
-    // 5. Password: min 6 chars, 1 capital, 1 symbol
     if (strlen($pass) < 6 || 
         !preg_match('/[A-Z]/', $pass) || 
         !preg_match('/[^a-zA-Z0-9]/', $pass)) {
@@ -43,19 +37,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 symbol";
     }
 
-    // 6. Peran must be one of the two options
     if (!in_array($peran, ['Teman Dengar', 'Teman Tuli'])) {
         $errors[] = "Peran must be 'Teman Dengar' or 'Teman Tuli'";
     }
 
-    // If there are errors, return them
     if (!empty($errors)) {
         echo json_encode(["status" => "error", "message" => implode(", ", 
 $errors)]);
         exit;
     }
 
-    // Hash password and save to database
     $hashed_pass = password_hash($pass, PASSWORD_BCRYPT);
 
     try {
