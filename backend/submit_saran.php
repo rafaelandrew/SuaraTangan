@@ -19,7 +19,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user_id = $_POST['user_id'] ?? '';
     $saran = trim($_POST['saran'] ?? '');
 
-    // Validation
     $errors = [];
 
     if (empty($user_id)) {
