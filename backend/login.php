@@ -1,5 +1,4 @@
 <?php
-// Add these lines at the very top for debugging
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
