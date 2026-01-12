@@ -1,4 +1,4 @@
-# 🤝 Suara Tangan
+# 🤝 Suara Tangan 
 
 A mobile application that bridges communication between the deaf/hard of hearing community and hearing individuals in Indonesia using Machine Learning to translate BISINDO (Indonesian Sign Language) in real-time.
 
